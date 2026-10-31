@@ -1,0 +1,23 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: url-deployment
+  labels:
+    app: url-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: url-app
+  template:
+    metadata:
+      labels:
+        app: url-app
+    spec:
+      containers:
+        - name: url-app
+          image: snk6182/url-shortener-springboot-maven:v1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
