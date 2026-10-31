@@ -20,4 +20,4 @@ spec:
           image: snk6182/url-shortener-springboot-maven:v1
           imagePullPolicy: Always
           ports:
-            - containerPort: 8080
+            - containerPort: 8000
